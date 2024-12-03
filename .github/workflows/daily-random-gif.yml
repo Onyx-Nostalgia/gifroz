@@ -1,6 +1,7 @@
 name: Daily Random GIF every 5 mins
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
 
