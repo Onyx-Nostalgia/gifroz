@@ -1,4 +1,4 @@
-name: Daily Random GIF every 5 mins
+name: Schedule Random GIF every 5 mins
 
 on:
   workflow_dispatch:
