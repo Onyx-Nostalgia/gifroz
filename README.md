@@ -4,11 +4,11 @@
 
 daily random <b>technology</b> GIF every<b> 5 mins⌚ </b>
 
-![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif)
+![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/technology.gif)
 
 **🪅 Copy & enjoy❗**
 
-`https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif`
+`https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/technology.gif`
 
 </div>
 
@@ -17,16 +17,16 @@ daily random <b>technology</b> GIF every<b> 5 mins⌚ </b>
 ### Use by URL link
 **🪅 Copy & enjoy❗**
 ```
-https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif
+https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/technology.gif
 ```
 
 ### Use in markdown
 ```md
-![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif)
+![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/technology.gif)
 ```
 ### Use in HTML
 ```html
-<img src="https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif"/>
+<img src="https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/technology.gif"/>
 ```
 
 ## 🚥Command 
