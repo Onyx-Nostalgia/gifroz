@@ -1,9 +1,13 @@
-name: Daily Random GIF every 5 mins
+name: Schedule Random GIF every 5 mins
 
 on:
   workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -25,5 +29,5 @@ jobs:
     - name: Commit new GIF
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: '🌟 feat: 🤖 upload new GIF ${{ steps.download-random-gif.outputs.output-gif }}'
+        commit_message: '🌟 feat: 🤖 schedule upload new GIF ${{ steps.download-random-gif.outputs.output-gif }}'
         file_pattern: '*.gif'
