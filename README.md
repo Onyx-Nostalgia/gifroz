@@ -2,6 +2,10 @@
 
 # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="25" height="25" /> Random GIF <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Partying%20Face.png" alt="Partying Face" width="25" height="25" />
 
+[![Schedule Random GIF every 5 mins](https://github.com/Onyx-Nostalgia/random-gif/actions/workflows/schedule-random-gif.yml/badge.svg?event=schedule)](https://github.com/Onyx-Nostalgia/random-gif/actions/workflows/schedule-random-gif.yml)
+<img src="http://ForTheBadge.com/images/badges/made-with-python.svg"/>
+
+
 daily random <b>technology</b> GIF every<b> 5 mins⌚ </b>
 
 ![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/technology.gif)
