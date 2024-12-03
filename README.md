@@ -1,11 +1,26 @@
-# 🥸 Random GIF
-daily random **technology GIF** every **5 mins**
+<div align="center">
+
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="25" height="25" /> Random GIF <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Partying%20Face.png" alt="Partying Face" width="25" height="25" />
+
+daily random
+<b style="font-size: 20px;">technology</b>
+GIF every
+<b style="font-size: 20px;">5 mins⌚ </b>
 
 ![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif)
-## 🤪 How to use
 
-### Use by URL link: 
-**`https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif`**
+**🪅 Copy & enjoy❗**
+
+<b> >> <a href="https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif" target="_blank">https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif</a> << </b>
+
+</div>
+
+## 🤪 How to use
+### Use by URL link
+**🪅 Copy & enjoy❗**
+```
+https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/refs/heads/master/outputs/technology.gif
+```
 
 ### Use in markdown
 ```md
