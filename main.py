@@ -3,30 +3,41 @@ import os
 import click
 import requests
 
+from src.giphy import GiphyApi
+from src.tenor import TenorApi
+
 
 @click.command()
-@click.option("-k", "--api-key", required=True, help="API key for Tenor")
+@click.option("-k", "--api-key", required=True, help="API key for Tenor and Giphy")
 @click.option(
     "-q",
     "--search",
     "search_term",
-    default="technology",
+    default="meme",
     show_default=True,
-    help="Search term for GIFs",
+    help="Search term for GIF",
 )
-def random_gif(api_key, search_term, limit=1):
+@click.option(
+    "-s",
+    "--source",
+    default="GIPHY",
+    type=click.Choice(["Tenor", "GIPHY"], case_sensitive=False),
+    show_default=True,
+    help="Source for GIF",
+)
+def random_gif(api_key, search_term, source):
     """
-    Downloads a random GIF matching the given search term from Tenor and saves it to
-    a file named after the search term in the "outputs" directory.
+    Downloads a random GIF matching the given search term from the given source and
+    saves it to a file named after the search term in the "outputs" directory.
     """
-    random_gif_url = f"https://g.tenor.com/v1/random?q={search_term}&key={api_key}&limit={limit}&ar_range=standard&media_filter=minimal"
-    response = requests.get(random_gif_url, timeout=10)
-    response.raise_for_status()
-    result = response.json()
-    result = result["results"][0]
-    gif_url = result["media"][0]["gif"]["url"]
-    output_path = f"outputs/{search_term}.gif"
+    match source.lower():
+        case "tenor":
+            source_api = TenorApi(api_key)
+        case "giphy":
+            source_api = GiphyApi(api_key)
 
+    gif_url, detail = source_api.random_gif(search_term)
+    output_path = f"outputs/{search_term}.gif".replace(" ", "_")
     if not os.path.exists("outputs"):
         os.mkdir("outputs")
 
@@ -34,8 +45,9 @@ def random_gif(api_key, search_term, limit=1):
         f.write(requests.get(gif_url, timeout=10).content)
 
     # display gif_url
-    click.echo(f"👍 GIF URL: {gif_url}")
-    click.echo(f"🎉 New GIF saved to {output_path}")
+    click.echo(f"😎 GIF URL: {gif_url}")
+    click.echo(f"🍹 Detail: {detail}")
+    click.echo(f"🎁 New GIF saved to {output_path}")
 
 
 def main():
