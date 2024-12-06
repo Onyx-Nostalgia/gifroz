@@ -25,7 +25,7 @@ jobs:
     - name: Download Random GIF
       id: download-random-gif
       run: |
-        echo output-gif=$(python main.py --search ${{ vars.SEARCH_KEY }} --api-key ${{ secrets.TENOR_API_KEY }} | grep -oP "https://media.tenor.com/.*/\K.*") >> $GITHUB_OUTPUT
+        echo output-gif=$(python main.py --search ${{ vars.SEARCH_KEY }} --api-key ${{ secrets.GIPHY_API_KEY }} | grep -oP "Detail: \K.*") >> $GITHUB_OUTPUT
     - name: Commit new GIF
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
