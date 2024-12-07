@@ -2,7 +2,11 @@
 
 # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="25" height="25" /> Random GIF <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Partying%20Face.png" alt="Partying Face" width="25" height="25" />
 
+<img src="http://ForTheBadge.com/images/badges/made-with-python.svg"/>
+<img src="https://github.com/Onyx-Nostalgia/random-gif/actions/workflows/schedule-random-gif.yml/badge.svg?branch=master&event=schedule"/>
+
 daily random <b>meme</b> GIF every<b> 5 mins⌚ </b>
+
 
 ![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/meme.gif)
 
@@ -32,7 +36,8 @@ https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/meme.
 ## 🚥Command 
 
 ### default example
-> [!TIP] default search key is "meme" from "GIPHY"
+> [!NOTE]
+> default search key is "meme" from "GIPHY"
 ```
 python main.py --api-key <GIPHY_API_KEY> 
 ```
