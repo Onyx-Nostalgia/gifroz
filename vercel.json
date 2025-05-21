@@ -1,13 +1,5 @@
 {
-  "version": 2,
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "main"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "app/routes/gif_routes"
-    }
+    { "source": "/(.*)", "destination": "/api/index" }
   ]
 }
