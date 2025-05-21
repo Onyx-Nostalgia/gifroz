@@ -24,7 +24,7 @@ class GifCache:
         """
         Save GIF details to the cache.
         """
-        timeout = current_app.config.get('CACHE_TIMEOUT', 300)  # Default to 300 seconds if not set
+        timeout = current_app.config.get('CACHE_TIMEOUT', 300)
         with self._lock:
             self._cache.update({
                 'gif_url': gif_url,
