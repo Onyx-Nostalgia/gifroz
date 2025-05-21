@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 from typing import Dict, Tuple
 
 import requests
+from werkzeug.exceptions import Forbidden, Unauthorized
 
 from api.exceptions.exceptions import NoGifFoundError, RateLimitExceededError
 
@@ -17,9 +18,16 @@ class SourceApi(ABC):
     def get_request(self, endpoint: str, params: Dict = None) -> Dict:
         url = f"{self.BASE_URL}{endpoint}"
         response = requests.get(url, params=params, timeout=10)
-        if response.status_code == 429:
-            self.logger.warning(f"API rate limit exceeded for URL: {url}")
-            raise RateLimitExceededError("API rate limit exceeded (HTTP 429). Please try again later.")
+        match response.status_code:
+            case 429:
+                self.logger.warning(f"API rate limit exceeded for URL: {url}")
+                raise RateLimitExceededError("API rate limit exceeded (HTTP 429). Please try again later.")
+            case 403:
+                self.logger.error(f"Forbidden access to URL: {url}")
+                raise Forbidden("Access forbidden (HTTP 403). Check your API key and permissions.")
+            case 401:
+                self.logger.error(f"Unauthorized access to URL: {url}")
+                raise Unauthorized("Unauthorized access (HTTP 401). Check your API key.")
         response.raise_for_status()
         data = response.json()
 

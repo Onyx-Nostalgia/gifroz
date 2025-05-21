@@ -4,6 +4,7 @@ import os
 import requests
 from dotenv import load_dotenv
 from flask import Flask, Response, jsonify, request
+from werkzeug.exceptions import Forbidden, Unauthorized
 
 from api.exceptions.exceptions import NoGifFoundError, RateLimitExceededError
 from api.services.giphy_service import GiphyApi
@@ -71,6 +72,10 @@ def home():
             return Response(content, mimetype=content_type)
         
         return jsonify({"error": str(e)}), 404 if isinstance(e, NoGifFoundError) else 429
+    except Forbidden as e:
+        return jsonify({"error": str(e) }), 403
+    except Unauthorized as e:
+        return jsonify({"error": str(e) }), 401
     except requests.exceptions.RequestException as e:
         logger.error(f"Request error communicating with external service: {e}", exc_info=True)
         return jsonify({"error": f"Error communicating with external service: {e}"}), 503
