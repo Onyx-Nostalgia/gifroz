@@ -1,72 +1,128 @@
 <div align="center">
 
-# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="25" height="25" /> Random GIF <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Partying%20Face.png" alt="Partying Face" width="25" height="25" />
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" /> Gifroz <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" />
 
-daily random <b>meme</b> GIF every<b> 5 mins⌚ </b>
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="50" height="50" />
 
-![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/meme.gif)
+A fun and fast random GIF generator powered by GIPHY and Tenor APIs! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="30" height="30" />
 
-**🪅 Copy & enjoy❗**
-
-`https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/meme.gif`
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white&style=for-the-badge)
+![Flask](https://img.shields.io/badge/Flask-3.1.1-green?logo=flask&logoColor=white&style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative&logoColor=white&style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?logo=github&logoColor=white&style=for-the-badge)
+![Made with Python](http://ForTheBadge.com/images/badges/made-with-python.svg)
 
 </div>
 
+---
 
-## 🤪 How to use
-### Use by URL link
-**🪅 Copy & enjoy❗**
-```
-https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/meme.gif
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25" height="25" /> Features
+
+- 🎨 Generate random GIFs based on search terms.
+- 🔍 Supports both GIPHY and Tenor as sources.
+- 🖼️ Easy integration with markdown, HTML, or direct URL usage.
+- ⚡ Fast and lightweight API.
+- 🔧 Fully customizable with query parameters.
+
+---
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" /> How to Use
+
+### Markdown Integration Example
+```markdown
+![Random GIF](http://localhost:5000)
 ```
 
-### Use in markdown
-```md
-![image](https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/meme.gif)
-```
-### Use in HTML
+### HTML Integration Example
 ```html
-<img src="https://raw.githubusercontent.com/Onyx-Nostalgia/random-gif/master/outputs/meme.gif"/>
+<img src="http://localhost:5000" alt="Random GIF">
+```
+### Query Parameters
+
+| Parameter | Description                                                                 | Default Value | Example Usage                     |
+|-----------|-----------------------------------------------------------------------------|---------------|-----------------------------------|
+| `q`       | Search term for the GIF. Avoid special characters like `&`, `=`. Use URL encoding for spaces (e.g., `q=qa%20meme`). | `meme`        | `q=cat`                        |
+| `source`  | Source for the GIF. Options: `giphy` or `tenor`.                           | `giphy`       | `source=tenor`                   |
+
+> [!WARNING]  
+> Avoid using special characters like `&`, `=` directly in the `q` parameter. These characters can cause issues with the API. Instead, use URL encoding. For example:
+> - Use `%20` for spaces (e.g., `q=qa%20meme`).
+> - Replace `&` with `%26` (e.g., `q=pm%26qa`).
+
+#### Examples with Query Parameter
+
+**Search: cats shocked**
+```markdown
+![Random GIF](http://localhost:5000/?q=cats%20shocked)
 ```
 
-## 🚥Command 
-
-### default example
-> [!TIP] default search key is "meme" from "GIPHY"
+**Search: pm & test**
+```markdown
+![Random GIF](http://localhost:5000/?q=qa%20%26%20test)
 ```
-python main.py --api-key <GIPHY_API_KEY> 
-```
-output: replace new gif to `outputs/meme.gif`
 
-### example with search word
-I want cat gif
-
+**Search: bugs=test**
+```markdown
+![Random GIF](http://localhost:5000/?q=bugs%3Dtest)
 ```
-python main.py --api-key <GIPHY_API_KEY> -q cat
-```
-output: replace new gif to `outputs/cat.gif`
 
-### example with source option
-> [!NOTE]
-> Source for GIF [default: GIPHY]: **GIPHY** , **Tenor**
-
-I want gif from tenor
+**Search: code review**
+```markdown
+![Random GIF](http://localhost:5000/?q=code%20review)
 ```
-python main.py --api-key <TENOR_API_KEY> --source tenor
-```
-output: replace new gif to `outputs/meme.gif`
 
-### Help description
+**Search: funny gif from Tenor**
+```markdown
+![Random GIF](http://localhost:5000/?q=funny&source=tenor)
 ```
-Usage: main.py [OPTIONS]
 
-  Downloads a random GIF matching the given search term from the given source
-  and saves it to a file named after the search term in the "outputs"
-  directory.
+---
 
-Options:
-  -k, --api-key TEXT          API key for Tenor and Giphy  [required]
-  -q, --search TEXT           Search term for GIF  [default: meme]
-  -s, --source [Tenor|GIPHY]  Source for GIF  [default: GIPHY ]
-  --help                      Show this message and exit.
+## 🛠️ Setup for Development
+
+Follow these steps to set up the project for development:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/gifroz.git
+cd gifroz
 ```
+
+### 2. Install Dependencies
+Make sure you have `uv` installed:
+```bash
+pip install uv
+```
+Then initialize the project:
+```bash
+uv init gifroz
+uv add flask python-dotenv requests
+```
+
+### 3. Create a `.env` File
+Create a `.env` file in the root directory with the following content:
+```env
+GIPHY_API_KEY=your_giphy_api_key
+TENOR_API_KEY=your_tenor_api_key
+```
+
+### 4. Run the Project
+Start the server:
+```bash
+uv run python api.py
+```
+The API will be available at `http://localhost:5000/`.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+Made with <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Heart" width="20" height="20" /> and Python <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Snake.png" alt="Snake" width="20" height="20" />
+
+</div>
