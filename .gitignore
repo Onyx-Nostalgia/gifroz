@@ -43,3 +43,5 @@ htmlcov/
 .cache/
 
 .vercel
+.env*.local
+.env.local
