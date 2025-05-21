@@ -2,12 +2,12 @@
   "version": 2,
   "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "main"
+      "source": "/(.*)",
+      "destination": "main"
     },
     {
-      "src": "/(.*)",
-      "dest": "app/routes/gif_routes"
+      "source": "/(.*)",
+      "destination": "app/routes/gif_routes"
     }
   ]
 }
