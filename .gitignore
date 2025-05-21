@@ -42,3 +42,4 @@ instance/
 htmlcov/
 .cache/
 
+.vercel
