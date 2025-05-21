@@ -1,8 +1,8 @@
 import logging
 import os
 
-DEFAULT_LOG_LEVEL_STR = os.getenv('FLASK_GLOBAL_LOG_LEVEL', 'DEBUG').upper()
-DEFAULT_LOG_LEVEL_INT = getattr(logging, DEFAULT_LOG_LEVEL_STR, logging.DEBUG)
+DEFAULT_LOG_LEVEL_STR = os.getenv('FLASK_GLOBAL_LOG_LEVEL', 'INFO').upper()
+DEFAULT_LOG_LEVEL_INT = logging.INFO
 
 
 def setup_logger(name: str, level_override: int = None) -> logging.Logger:
