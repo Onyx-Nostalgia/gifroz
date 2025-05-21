@@ -1,7 +1,5 @@
 import logging
-import os
 
-DEFAULT_LOG_LEVEL_STR = os.getenv('FLASK_GLOBAL_LOG_LEVEL', 'INFO').upper()
 DEFAULT_LOG_LEVEL_INT = logging.INFO
 
 
@@ -13,12 +11,9 @@ def setup_logger(name: str, level_override: int = None) -> logging.Logger:
     if level_override is not None:
         final_level = level_override
     else:
-        try:
-            from flask import current_app
-            if current_app:
-                final_level = current_app.config.get('LOG_LEVEL', DEFAULT_LOG_LEVEL_INT)
-        except (ImportError, RuntimeError):
-            pass
+        from flask import current_app
+        if current_app:
+            final_level = current_app.config.get('LOG_LEVEL', DEFAULT_LOG_LEVEL_INT)
 
     if not logger.handlers:
         handler = logging.StreamHandler()
