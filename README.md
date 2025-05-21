@@ -56,24 +56,24 @@ A fun and fast random GIF generator powered by GIPHY and Tenor APIs! <img src="h
 ![Random GIF](http://localhost:5000/?q=cats%20shocked)
 ```
 
-**Search: pm & test**
+**Search: dev & meme**
 ```markdown
-![Random GIF](http://localhost:5000/?q=qa%20%26%20test)
+![Random GIF](http://localhost:5000/?q=dev%20%26%20meme)
 ```
 
-**Search: bugs=test**
+**Search: dev=meme**
 ```markdown
-![Random GIF](http://localhost:5000/?q=bugs%3Dtest)
+![Random GIF](http://localhost:5000/?q=dev%3Dmeme)
 ```
 
-**Search: code review**
+**Search: dev-meme**
 ```markdown
-![Random GIF](http://localhost:5000/?q=code%20review)
+![Random GIF](http://localhost:5000/?q=dev-meme)
 ```
 
-**Search: funny gif from Tenor**
+**Search: dev gif from Tenor**
 ```markdown
-![Random GIF](http://localhost:5000/?q=funny&source=tenor)
+![Random GIF](http://localhost:5000/?q=dev&source=tenor)
 ```
 
 ---
@@ -100,16 +100,12 @@ uv add flask python-dotenv requests
 ```
 
 ### 3. Create a `.env` File
-Create a `.env` file in the root directory with the following content:
-```env
-GIPHY_API_KEY=your_giphy_api_key
-TENOR_API_KEY=your_tenor_api_key
-```
+Create a `.env` file in the root directory with the following  content [.env.example](.env.example)
 
 ### 4. Run the Project
 Start the server:
 ```bash
-uv run python api.py
+uv run python flask run
 ```
 The API will be available at `http://localhost:5000/`.
 
