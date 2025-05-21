@@ -1,16 +1,13 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "main.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "buildCommand": "python3 -m pip install uv && uv pip compile pyproject.toml -o requirements.txt",
-  "routes": [
+  "rewrites": [
     {
       "src": "/(.*)",
-      "dest": "main.py"
+      "dest": "main"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "app/routes/gif_routes"
     }
   ]
 }
