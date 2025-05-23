@@ -1,16 +1,25 @@
 <div align="center">
 
 # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" /> Gifroz <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" />
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="50" height="50" />
-
-A fun and fast random GIF generator powered by GIPHY and Tenor APIs! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="30" height="30" />
-
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white&style=for-the-badge)
 ![Flask](https://img.shields.io/badge/Flask-3.1.1-green?logo=flask&logoColor=white&style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative&logoColor=white&style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?logo=github&logoColor=white&style=for-the-badge)
-![Made with Python](http://ForTheBadge.com/images/badges/made-with-python.svg)
+![deployment](https://img.shields.io/badge/deployment-automatic-brightgreen?logo=github&logoColor=white&style=for-the-badge)
+
+<img src="https://gifroz.vercel.app/" height="200" />
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Right.png" alt="Backhand Index Pointing Right" width="25" height="25" /> [https://gifroz.vercel.app/](https://gifroz.vercel.app/) <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Left.png" alt="Backhand Index Pointing Left" width="25" height="25" />
+
+
+Experience a new random GIF from GIPHY or Tenor with **every refresh!** Gifroz offers an incredibly simple URL that's a breeze to integrate. 
+
+**Don't believe it? Refresh this page and see the magic!** <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Crystal%20Ball.png" alt="Crystal Ball" width="25" height="25" />
+
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-3d2c7e?style=for-the-badge&logo=rocket&logoColor=white)](https://gifroz.vercel.app/)
+
 
 </div>
 
@@ -30,12 +39,12 @@ A fun and fast random GIF generator powered by GIPHY and Tenor APIs! <img src="h
 
 ### Markdown Integration Example
 ```markdown
-![Random GIF](http://localhost:5000)
+![Random GIF](https://gifroz.vercel.app/)
 ```
 
 ### HTML Integration Example
 ```html
-<img src="http://localhost:5000" alt="Random GIF">
+<img src="https://gifroz.vercel.app/" alt="Random GIF">
 ```
 ### Query Parameters
 
@@ -49,65 +58,52 @@ A fun and fast random GIF generator powered by GIPHY and Tenor APIs! <img src="h
 > - Use `%20` for spaces (e.g., `q=qa%20meme`).
 > - Replace `&` with `%26` (e.g., `q=pm%26qa`).
 
-#### Examples with Query Parameter
+### Examples with Query Parameter
 
-**Search: cats shocked**
+#### Search: fat cat
 ```markdown
-![Random GIF](http://localhost:5000/?q=cats%20shocked)
+![Random GIF](https://gifroz.vercel.app/?q=fat%20cat)
 ```
+![Random GIF](https://gifroz.vercel.app/?q=fat%20cat)
 
-**Search: dev & meme**
+#### Search: dev & meme
 ```markdown
-![Random GIF](http://localhost:5000/?q=dev%20%26%20meme)
+![Random GIF](https://gifroz.vercel.app/?q=dev%20%26%20meme)
 ```
+![Random GIF](https://gifroz.vercel.app/?q=dev%20%26%20meme)
 
-**Search: dev=meme**
+#### Search: dev=meme
 ```markdown
-![Random GIF](http://localhost:5000/?q=dev%3Dmeme)
+![Random GIF](https://gifroz.vercel.app/?q=dev%3Dmeme)
 ```
+![Random GIF](https://gifroz.vercel.app/?q=dev%3Dmeme)
 
-**Search: dev-meme**
+#### Search: dev-meme
 ```markdown
-![Random GIF](http://localhost:5000/?q=dev-meme)
+![Random GIF](https://gifroz.vercel.app/?q=dev-meme)
 ```
+![Random GIF](https://gifroz.vercel.app/?q=dev-meme)
 
-**Search: dev gif from Tenor**
+#### Search: dev gif from Tenor
 ```markdown
-![Random GIF](http://localhost:5000/?q=dev&source=tenor)
+![Random GIF](https://gifroz.vercel.app/?q=dev&source=tenor)
 ```
+![Random GIF](https://gifroz.vercel.app/?q=dev&source=tenor)
 
 ---
 
-## 🛠️ Setup for Development
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20activities/Man%20Raising%20Hand%20Light%20Skin%20Tone.png" alt="Hand" width="25" height="25" /> Contributing
 
-Follow these steps to set up the project for development:
+Contributions are welcome! If you have suggestions or want to improve Gifroz, please feel free to:
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/gifroz.git
-cd gifroz
-```
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/your-feature-name`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add some feature'`).
+5.  Push to the branch (`git push origin feature/your-feature-name`).
+6.  Open a Pull Request.
 
-### 2. Install Dependencies
-Make sure you have `uv` installed:
-```bash
-pip install uv
-```
-Then initialize the project:
-```bash
-uv init gifroz
-uv add flask python-dotenv requests
-```
-
-### 3. Create a `.env` File
-Create a `.env` file in the root directory with the following  content [.env.example](.env.example)
-
-### 4. Run the Project
-Start the server:
-```bash
-uv run python flask run
-```
-The API will be available at `http://localhost:5000/`.
+Please open an issue first to discuss any significant changes.
 
 ---
 
