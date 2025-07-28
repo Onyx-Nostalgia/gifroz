@@ -107,6 +107,17 @@ Please open an issue first to discuss any significant changes.
 
 ---
 
+## 🔗 Content Attribution
+
+This project utilizes content (GIFs/WebPs) sourced from the following APIs:
+
+* **Tenor:** Powered By Tenor. [Tenor API](https://developers.google.com/tenor/guides/quickstart)
+* **GIPHY:** Powered By GIPHY. [GIPHY API](https://developers.giphy.com/docs/api/)
+
+Please note that all content is subject to the respective terms of service and licensing of Tenor and GIPHY.
+
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
