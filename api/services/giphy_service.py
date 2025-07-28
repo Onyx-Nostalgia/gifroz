@@ -3,7 +3,6 @@ import os
 from typing import Dict, Tuple
 
 from api.services.source_service import SourceApi
-from api.utils.image import add_watermark_to_image_sequence
 
 
 class GiphyApi(SourceApi):
@@ -11,6 +10,8 @@ class GiphyApi(SourceApi):
     LOGO_PATH = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "..", "assets", "giphy_logo.png")
     )
+    LOGO_PADDING = 0
+    LOGO_OPACITY = 0.8
     
     def __init__(self, api_key: str):
         super().__init__(api_key)
@@ -44,12 +45,11 @@ class GiphyApi(SourceApi):
         self.logger.debug(f"Giphy: Selected GIF URL: {gif_url}, Title: {detail}")
         image_content, content_type = self.get_image_content(gif_url)
         
-        watermarked_content = add_watermark_to_image_sequence(image_content, self.LOGO_PATH)
-
-        if watermarked_content:
-            return watermarked_content, content_type
-
-        self.logger.warning("Watermarking failed, returning original image.")
-        return image_content, content_type
-    
+        watermarked_content = self._apply_watermark(
+            image_content,
+            self.LOGO_PATH,
+            padding=self.LOGO_PADDING,
+            opacity=self.LOGO_OPACITY,
+        )
+        return watermarked_content, content_type
     

@@ -1,11 +1,12 @@
 import logging
 from abc import ABC, abstractmethod
-from typing import Dict, Tuple
+from typing import Any, Dict, Tuple
 
 import requests
 from werkzeug.exceptions import Forbidden, Unauthorized
 
 from api.exceptions.exceptions import NoGifFoundError, RateLimitExceededError
+from api.utils.image import add_watermark_to_image_sequence
 
 
 class SourceApi(ABC):
@@ -43,6 +44,22 @@ class SourceApi(ABC):
         content_type = image_response.headers.get('Content-Type', 'image/gif')
         self.logger.info("Fetched image content successfully.")
         return image_response.content, content_type
+
+    def _apply_watermark(
+        self,
+        image_content: bytes,
+        logo_path: str,
+        **kwargs: Any,
+    ) -> bytes:
+        """Applies a watermark to the image content and handles failures."""
+        watermarked_content = add_watermark_to_image_sequence(
+            image_content, logo_path, **kwargs
+        )
+        if watermarked_content:
+            return watermarked_content
+
+        self.logger.warning("Watermarking failed, returning original image.")
+        return image_content
 
     @abstractmethod
     def random_gif(self, params: Dict[str, str]) -> Tuple[bytes, str]:
