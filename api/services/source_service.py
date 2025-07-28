@@ -45,5 +45,5 @@ class SourceApi(ABC):
         return image_response.content, content_type
 
     @abstractmethod
-    def random_gif(self, search_term: str) -> Tuple[str, str]:
+    def random_gif(self, params: Dict[str, str]) -> Tuple[bytes, str]:
         pass
