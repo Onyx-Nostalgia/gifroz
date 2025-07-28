@@ -7,8 +7,8 @@ set -e
 
 # Check if at least one library is provided as an argument.
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <library1> [library2] ... [\"library3>=1.0.0\"]"
-    echo "Error: No libraries specified."
+    echo "Usage: $0 <library1> [library2] ... [\"library3>=1.0.0\"]" >&2
+    echo "Error: No libraries specified." >&2
     exit 1
 fi
 
