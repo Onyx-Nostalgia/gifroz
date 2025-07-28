@@ -41,6 +41,8 @@ packaging==25.0
     #   pytest
 pathspec==0.12.1
     # via black
+pillow==11.3.0
+    # via gifroz (pyproject.toml)
 platformdirs==4.3.8
     # via black
 pluggy==1.6.0
