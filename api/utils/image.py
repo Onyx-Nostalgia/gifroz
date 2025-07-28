@@ -28,20 +28,17 @@ def add_watermark_to_image_sequence(image_bytes_data, logo_path, padding=0, fixe
         
         original_disposal = image_sequence.info.get("disposal", 0) 
 
+        logo_width, logo_height = logo.size
+        target_logo_height = int(fixed_logo_width * (logo_height / logo_width))
+        resized_logo = logo.resize((fixed_logo_width, target_logo_height), Image.Resampling.LANCZOS)
+
+        if opacity < 1.0:
+            alpha = resized_logo.split()[-1]
+            alpha = Image.eval(alpha, lambda x: int(x * opacity))
+            resized_logo.putalpha(alpha)
+
         for frame in ImageSequence.Iterator(image_sequence):
             current_frame = frame.convert("RGBA")
-
-            target_logo_width = fixed_logo_width
-            
-            logo_w_ratio, logo_h_ratio = logo.size
-            target_logo_height = int(target_logo_width * (logo_h_ratio / logo_w_ratio))
-
-            resized_logo = logo.resize((target_logo_width, target_logo_height), Image.Resampling.LANCZOS)
-
-            if opacity < 1.0:
-                alpha = resized_logo.split()[-1]
-                alpha = Image.eval(alpha, lambda x: int(x * opacity))
-                resized_logo.putalpha(alpha)
 
             position_x = current_frame.width - resized_logo.width - padding
             position_y = current_frame.height - resized_logo.height - padding
