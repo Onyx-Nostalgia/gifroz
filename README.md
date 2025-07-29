@@ -1,12 +1,17 @@
 <div align="center">
 
 # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" /> Gifroz <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" />
+
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white&style=for-the-badge)
 ![Flask](https://img.shields.io/badge/Flask-3.1.1-green?logo=flask&logoColor=white&style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative&logoColor=white&style=for-the-badge)
-![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+![Giphy](https://img.shields.io/badge/Giphy-100e18?logo=giphy&logoColor=f2545b&style=for-the-badge)
+![Tenor](https://img.shields.io/badge/Tenor-087ede?style=for-the-badge&logo=tenor&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white&style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?logo=github&logoColor=white&style=for-the-badge)
 ![deployment](https://img.shields.io/badge/deployment-automatic-brightgreen?logo=github&logoColor=white&style=for-the-badge)
+![release](https://img.shields.io/github/v/release/Onyx-Nostalgia/gifroz?style=for-the-badge)
+
 
 <img src="https://gifroz.vercel.app/" height="200" />
 
@@ -48,10 +53,10 @@ Experience a new random GIF from GIPHY or Tenor with **every refresh!** Gifroz o
 ```
 ### Query Parameters
 
-| Parameter | Description                                                                 | Default Value | Example Usage                     |
-|-----------|-----------------------------------------------------------------------------|---------------|-----------------------------------|
-| `q`       | Search term for the GIF. Avoid special characters like `&`, `=`. Use URL encoding for spaces (e.g., `q=qa%20meme`). | `meme`        | `q=cat`                        |
-| `source`  | Source for the GIF. Options: `giphy` or `tenor`.                           | `giphy`       | `source=tenor`                   |
+| Parameter | Description                                                                                                         | Default Value | Example Usage  |
+| --------- | ------------------------------------------------------------------------------------------------------------------- | ------------- | -------------- |
+| `q`       | Search term for the GIF. Avoid special characters like `&`, `=`. Use URL encoding for spaces (e.g., `q=qa%20meme`). | `meme`        | `q=cat`        |
+| `source`  | Source for the GIF. Options: `giphy` or `tenor`.                                                                    | `giphy`       | `source=tenor` |
 
 > [!WARNING]  
 > Avoid using special characters like `&`, `=` directly in the `q` parameter. These characters can cause issues with the API. Instead, use URL encoding. For example:
@@ -60,35 +65,13 @@ Experience a new random GIF from GIPHY or Tenor with **every refresh!** Gifroz o
 
 ### Examples with Query Parameter
 
-#### Search: fat cat
-```markdown
-![Random GIF](https://gifroz.vercel.app/?q=fat%20cat)
-```
-![Random GIF](https://gifroz.vercel.app/?q=fat%20cat)
-
-#### Search: dev & meme
-```markdown
-![Random GIF](https://gifroz.vercel.app/?q=dev%20%26%20meme)
-```
-![Random GIF](https://gifroz.vercel.app/?q=dev%20%26%20meme)
-
-#### Search: dev=meme
-```markdown
-![Random GIF](https://gifroz.vercel.app/?q=dev%3Dmeme)
-```
-![Random GIF](https://gifroz.vercel.app/?q=dev%3Dmeme)
-
-#### Search: dev-meme
-```markdown
-![Random GIF](https://gifroz.vercel.app/?q=dev-meme)
-```
-![Random GIF](https://gifroz.vercel.app/?q=dev-meme)
-
-#### Search: dev gif from Tenor
-```markdown
-![Random GIF](https://gifroz.vercel.app/?q=dev&source=tenor)
-```
-![Random GIF](https://gifroz.vercel.app/?q=dev&source=tenor)
+| Scenario                     | URL                                             |
+| ---------------------------- | ----------------------------------------------- |
+| Search: **"fat cat"**        | `https://gifroz.vercel.app/?q=fat%20cat`        |
+| Search: **"dev & meme"**     | `https://gifroz.vercel.app/?q=dev%20%26%20meme` |
+| Search: **"dev=meme"**       | `https://gifroz.vercel.app/?q=dev%3Dmeme`       |
+| Search: **"dev-meme"**       | `https://gifroz.vercel.app/?q=dev-meme`         |
+| Search: **"dev"** from **Tenor** | `https://gifroz.vercel.app/?q=dev&source=tenor` |
 
 ---
 
