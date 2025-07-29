@@ -4,7 +4,7 @@ import logging
 from PIL import Image, ImageSequence
 
 
-def add_watermark_to_image_sequence(image_bytes_data, logo_path, padding=0, fixed_logo_width=100, opacity=0.8):
+def add_watermark_to_image_sequence(image_bytes_data: bytes, logo_path: str, padding: int = 0, fixed_logo_width: int = 100, opacity: float = 0.8) -> bytes | None:
     """
     Adds a watermark logo to the bottom-right corner of each frame of an image sequence (GIF or WebP).
 
