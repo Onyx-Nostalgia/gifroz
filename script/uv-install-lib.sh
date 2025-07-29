@@ -12,6 +12,11 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
+if [ ! -f "pyproject.toml" ]; then
+    echo "Error: pyproject.toml not found. Please run this script from the project root." >&2
+    exit 1
+fi
+
 echo "Adding the following libraries to pyproject.toml: $@"
 uv add "$@"
 
