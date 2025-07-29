@@ -1,0 +1,16 @@
+[project]
+name = "gifroz"
+version = "0.1.0"
+description = "random GIF URL generator"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=25.1.0",
+    "codecov>=2.1.13",
+    "flask>=3.1.1",
+    "pillow>=11.3.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+]

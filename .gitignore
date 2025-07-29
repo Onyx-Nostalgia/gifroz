@@ -1,1 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.eggs/
+*.log
+*.sqlite3
+*.db
+*.pot
+*.mo
+*.pyc
+
+# Flask
+instance/
+*.db
+*.sqlite3
+*.log
+*.pid
+*.lock
+
+# Environment
+.env
 .venv/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Testing
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+.vercel
+.env*.local
+.env.local
