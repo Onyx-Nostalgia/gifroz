@@ -1,3 +1,7 @@
+> [!CAUTION]
+> **Live Site Unavailable (Service Temporarily Suspended)**  
+> The website is currently paused after exceeding the Vercel Hobby plan usage quota due to continuous traffic. Service will resume automatically once the billing cycle resets, or following migration to an alternative hosting platform.
+
 <div align="center">
 
 # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" /> Gifroz <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="30" height="30" />
@@ -8,10 +12,9 @@
 ![Giphy](https://img.shields.io/badge/Giphy-100e18?logo=giphy&logoColor=f2545b&style=for-the-badge)
 ![Tenor](https://img.shields.io/badge/Tenor-087ede?style=for-the-badge&logo=tenor&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white&style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?logo=github&logoColor=white&style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Inactive-red?logo=github&logoColor=white&style=for-the-badge)
 ![deployment](https://img.shields.io/badge/deployment-automatic-brightgreen?logo=github&logoColor=white&style=for-the-badge)
 ![release](https://img.shields.io/github/v/release/Onyx-Nostalgia/gifroz?style=for-the-badge)
-
 
 <img src="https://gifroz.vercel.app/" height="200" />
 
